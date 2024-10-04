@@ -36,6 +36,16 @@ h1 {
     border-radius: 5px;
 }
 
+.chat-notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #d1ecf1;
+    color: #0c5460;
+    display: none; /* Oculto por defecto */
+}
+
 #chat-input {
     width: calc(100% - 110px);
     padding: 10px;
