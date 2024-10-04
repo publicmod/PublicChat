@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Anónimo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importar Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Chat Anónimo</h1>
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Escribe tu mensaje aquí...">
+        <button id="send-btn">Enviar</button>
+        <button id="next-btn">Buscar Nuevo Chat</button>
+    </div>
+</body>
+</html>
