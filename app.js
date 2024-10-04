@@ -24,13 +24,12 @@ document.getElementById('next-btn').addEventListener('click', findNewChat);
 function addUser() {
     const userRef = usersRef.child(username);
     userRef.set(true);
-
     userRef.onDisconnect().remove(); // Eliminar el usuario al desconectar
 }
 
 // Buscar nuevo chat
 function findNewChat() {
-    if (chatRoom) {
+    if (chatRef) {
         chatRef.off(); // Desconectar del chat actual
     }
 
@@ -48,7 +47,7 @@ function findNewChat() {
                 chatRef.on('child_added', displayMessage);
 
                 // Mensaje de usuario encontrado
-                displayMessage({ username: "Sistema", message: `Usuario encontrado: ${randomUser}` });
+                displayMessage({ username: "Sistema", message: `Chat encontrado con ${randomUser}. ¡Comienza a chatear!` });
             }
         } else {
             displayMessage({ username: "Sistema", message: "Esperando a otro usuario..." });
